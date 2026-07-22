@@ -233,13 +233,8 @@ def compress_chunk(data, out_path, tool):
     return crc, packed_size
 
 
-<<<<<<< Updated upstream
-def prepare_chunks(args, input_stream, tftp_root, free_slots, results, abort,
-                   block_size, capacity_bytes, compress_tool): # noqa: C901
-=======
 def prepare_chunks(args, input_stream, tftp_root, free_slots, results, abort,  # noqa: C901
                    block_size, capacity_bytes, compress_tool):
->>>>>>> Stashed changes
     """Read, validate and compress chunks ahead of U-Boot writes."""
     # Send a prepared chunk, the end marker, or an error to the main thread.
     # The timeout allows this worker to notice an abort while the queue is
