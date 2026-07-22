@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install flake8
+          python3 -m pip install flake8 pytest pyserial
 
       - name: Lint with flake8
         run: |
@@ -37,3 +37,7 @@ jobs:
           # Check code style and complexity.
           flake8 . --count --max-complexity=12 \
             --max-line-length=120 --statistics
+
+      - name: Test with pytest
+        run: |
+          pytest
